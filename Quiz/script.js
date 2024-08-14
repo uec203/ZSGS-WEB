@@ -5,6 +5,7 @@ let attend;
 let contains;
 let answers;
 let submit;
+let reset;
 fetch("question.json").then(x => {
     return x.json();
 }).then(y => {
@@ -18,6 +19,8 @@ function start(y) {
     submit = document.getElementById("submit");
     submit.addEventListener("click", result);
     contains = document.getElementById("questioncontainer");
+    reset = document.getElementById("reset");
+    reset.addEventListener("click",reloading);
     for (let title in y) {
         createTitle(title);
         for (let z of y[title]) {
@@ -106,4 +109,7 @@ let result = () => {
     scorecontainer.style.display='block';
     viewscore.innerHTML=""+score;
     attend.innerHTML = ""+attended;
+};
+function reloading(){
+    location.reload();
 };
