@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+}
+h1{
+    margin: inherit;
+}
+.header{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+}
+.title{
+    display: flex;
+    font-size: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10%;
+}
+.questioncontainer{
+    margin: 0 10%;
+}
+.questioncard{
+    width: 100%;
+    padding: 1% 2% 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 5%;
+}
+.question{
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.options{
+    display: grid;
+    grid-template-columns: repeat(4,0.8fr);
+    grid-column-gap: 1%;
+    width: inherit;
+    margin: 1% 2% 0%;
+
+}
+.option{
+    width: fit-content;
+}
+[type="radio"]{
+    display: none;
+}
+[type="button"]{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 1%;
+    font-weight: 300;
+    background-color: black;
+    color: azure;
+}
+[type="button"]:active{
+    background-color: white;
+    color: black;
+    box-shadow: 10px;
+}
+.button{
+    margin:2% 2% 0%;
+    display: flex;
+    justify-content: center;
+}
+footer{
+    height: 3vh;
+    background-color: black;
+}
+div > label{
+    border: 1px solid black;
+    width: fit-content;
+    font-size: 0.8rem;
+    margin: 5px;
+    padding: 6px;
+    border-radius: 15px;
+    font-weight: bolder;
+}
+[type="radio"]:checked ~ label{
+    background-color: green;
+}
+#score{
+    align-self: center;
+    display: none;
+}
+div > p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+#span1{
+    color: green;
+}
